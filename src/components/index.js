@@ -15,6 +15,7 @@ import FormatDate from './FormatDate'
 import MainBar from './MainBar'
 import MainDialogLoader from './MainDialogLoader'
 import MainDrawer from './MainDrawer'
+import PopUp from './PopUp'
 
 export {
     ActionDelete,
@@ -33,5 +34,6 @@ export {
     FormatDate,
     MainBar,
     MainDialogLoader,
-    MainDrawer
+    MainDrawer,
+    PopUp
 }

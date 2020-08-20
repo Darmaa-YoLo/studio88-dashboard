@@ -13,21 +13,22 @@ import shortid from "shortid";
 import axios from "../plugins/axios";
 
 const styles = (theme) => ({
-  //
+  marginBottom: {
+    margin: "0 0 20px 0",
+  },
 });
 
-class AboutSetting extends Component {
+class PortfolioSetting extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      title: "Бидний тухай - Тохиргоо",
+      title: "Хийсэн ажлууд - Тохиргоо",
       fetching: false,
       disabled: false,
       isSnackOpen: false,
-      about_desc: "",
-      errors: "",
-      about_cover: "",
+      portfolio_cover: "",
+      portfolio_desc:"",
+      errors: {},
     };
   }
 
@@ -59,12 +60,12 @@ class AboutSetting extends Component {
       disabled: true,
     });
 
-    const { about_desc, about_cover } = this.state;
+    const { portfolio_cover ,portfolio_desc} = this.state;
 
     try {
       await axios.put("/option", {
-        about_desc,
-        about_cover,
+        portfolio_cover,
+        portfolio_desc,
       });
 
       this.setState({
@@ -104,7 +105,7 @@ class AboutSetting extends Component {
 
   onPictureChange = (path = "") => {
     this.setState({
-      about_cover: path,
+      portfolio_cover: path,
     });
   };
 
@@ -114,9 +115,9 @@ class AboutSetting extends Component {
       key,
       disabled,
       isSnackOpen,
-      about_desc,
+      portfolio_cover,
+      portfolio_desc,
       errors,
-      about_cover,
     } = this.state;
 
     return (
@@ -125,30 +126,29 @@ class AboutSetting extends Component {
           <Grid container spacing={3}>
             <Grid item xs={6}>
               <Box my={3}>
-
+               
                 <div className={styles.marginBottom}>
                   <DropZone
                     label="Зураг"
                     uploadPath="upload/image"
                     onChange={this.onPictureChange}
-                    file={about_cover}
-                    error={!!errors.about_cover}
+                    file={portfolio_cover}
+                    error={!!errors.portfolio_cover}
                   />
                 </div>
               </Box>
               <Box my={3}>
                 <TextField
-                  label="Бидний зорилго"
-                  value={about_desc}
-                  onChange={this.handleChange("about_desc")}
+                  label="Бидний хийсэн ажлууд"
+                  value={portfolio_desc}
+                  onChange={this.handleChange("portfolio_desc")}
                   variant="outlined"
                   margin="normal"
                   multiline
-                  rows={7}
+                  rows={3}
                   fullWidth
                 />
               </Box>
-
               <Button
                 color="primary"
                 variant="contained"
@@ -174,4 +174,4 @@ class AboutSetting extends Component {
   }
 }
 
-export default withStyles(styles)(AboutSetting);
+export default withStyles(styles)(PortfolioSetting);

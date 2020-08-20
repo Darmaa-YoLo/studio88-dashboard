@@ -1,45 +1,29 @@
-import AboutSetting from './AboutSetting'
-import ChannelForm from './ChannelForm'
-import BranchForm from './BranchForm'
-import FaqForm from './FaqForm'
 import SettingForm from './SettingForm'
-import PromotionForm from './PromotionForm'
 import UserForm from './UserForm'
-import FeaturedContentForm from './FeaturedContentForm'
-import FaqCategoryForm from './FaqCategoryForm'
-import CoverForm from './CoverForm'
-import ContentForm from './ContentForm'
-import ContentCategoryForm from './ContentCategoryForm'
-import FeatureForm from './FeatureForm'
-import PlanForm from './PlanForm'
 import HomeSetting from './HomeSetting'
-import ChannelSetting from './ChannelSetting'
+import WorksForm from './WorksForm'
+import ClientForm from './ClientForm'
+import TeamForm from './TeamForm'
+import FilterForm from './FilterForm'
+import AboutSetting from './AboutSetting'
 import ContactSetting from './ContactSetting'
-import ReplaySetting from './ReplaySetting'
-import CoverSetting from './CoverSetting'
-import ChannelCategoryForm from './ChannelCategoryForm'
-import ValueForm from './ValueForm'
+import PortfolioSetting from './PortfolioSetting'
+import FooterSetting from './FooterSetting'
+import LogoSetting from './LogoSetting'
+import AboutForm from './AboutForm'
 
 export {
-    AboutSetting,
-    ChannelForm,
-    BranchForm,
-    FaqForm,
     SettingForm,
-    PromotionForm,
     UserForm,
-    FeaturedContentForm,
-    ContentForm,
-    FaqCategoryForm,
-    CoverForm,
-    ContentCategoryForm,
-    FeatureForm,
-    PlanForm,
     HomeSetting,
-    ChannelSetting,
+    WorksForm,
+    FilterForm,
+    ClientForm,
+    AboutForm,
+    TeamForm,
+    AboutSetting,
     ContactSetting,
-    ReplaySetting,
-    CoverSetting,
-    ChannelCategoryForm,
-    ValueForm
+    FooterSetting,
+    PortfolioSetting,
+    LogoSetting
 }

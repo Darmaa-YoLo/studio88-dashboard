@@ -5,63 +5,40 @@ import {
     Switch
 } from 'react-router-dom'
 import {
-    ChannelNew,
-    Channels,
-    ChannelUpdate,
     ForgotPassword,
     Home,
     Login,
     NotFound,
     PasswordReset,
-    BranchNew,
-    Branches,
-    BranchUpdate,
     Register,
-    FaqNew,
-    Faqs,
-    FaqUpdate,
-    PromotionsNew,
-    Promotions,
-    PromotionsUpdate,
     UserNew,
     Users,
     UserUpdate,
-    FeaturedContentNew,
-    FeaturedContents,
-    FeaturedContentUpdate,
-    Contents,
-    ContentNew,
-    ContentUpdate,
-    FaqCategoryUpdate,
-    FaqCategoryNew,
-    FaqCategories,
-    Covers,
-    CoverNew,
-    CoverUpdate,
-    ContentCategories,
-    ContentCategoryNew,
-    ContentCategoryUpdate,
-    Features,
-    FeatureNew,
-    FeatureUpdate,
-    Plans,
-    PlanNew,
-    PlanUpdate,
-    ChannelCategories,
-    ChannelCategoryNew,
-    ChannelCategoryUpdate,
-    Values,
-    ValueNew,
-    ValueUpdate
+    Works,
+    WorksNew,
+    WorksUpdate,
+    ClientsUpdate,
+    ClientsNew,
+    Clients,
+    TeamUpdate,
+    TeamNew,
+    Team,
+    Filter,
+    FilterNew,
+    FilterUpdate,
+    About,
+    AboutUpdate,
+    AboutNew
 } from './pages'
-import {
-    AboutSetting,
+
+import{
     HomeSetting,
-    ReplaySetting,
-    ChannelSetting,
+    AboutSetting,
     ContactSetting,
-    CoverSetting,
-} from './forms';
+    PortfolioSetting,
+    FooterSetting,
+    LogoSetting
+} from './forms'
 
 export default () => (
     <Router>
@@ -100,162 +77,66 @@ export default () => (
                 component={Users}
             />
             <Route
-                path="/featured/contents/new"
-                component={FeaturedContentNew}
+                path="/works/new"
+                component={WorksNew}
             />
             <Route
-                path="/featured/contents/:id"
-                component={FeaturedContentUpdate}
+                path="/works/:id"
+                component={WorksUpdate}
             />
             <Route
-                path="/featured/contents"
-                component={FeaturedContents}
+                path="/works"
+                component={Works}
             />
             <Route
-                path="/content/categories/new"
-                component={ContentCategoryNew}
+                path="/clients/new"
+                component={ClientsNew}
             />
             <Route
-                path="/content/categories/:id"
-                component={ContentCategoryUpdate}
+                path="/clients/:id"
+                component={ClientsUpdate}
             />
             <Route
-                path="/content/categories"
-                component={ContentCategories}
+                path="/clients"
+                component={Clients}
             />
             <Route
-                path="/branches/new"
-                component={BranchNew}
+                path="/team/new"
+                component={TeamNew}
             />
             <Route
-                path="/branches/:id"
-                component={BranchUpdate}
+                path="/team/:id"
+                component={TeamUpdate}
             />
             <Route
-                path="/branches"
-                component={Branches}
+                path="/team"
+                component={Team}
             />
             <Route
-                path="/faqs/new"
-                component={FaqNew}
+                path="/filter/new"
+                component={FilterNew}
             />
             <Route
-                path="/faqs/:id"
-                component={FaqUpdate}
+                path="/filter/:id"
+                component={FilterUpdate}
             />
             <Route
-                path="/faqs"
-                component={Faqs}
+                path="/filter"
+                component={Filter}
             />
             <Route
-                path="/channels/new"
-                component={ChannelNew}
+                path="/about/new"
+                component={AboutNew}
             />
             <Route
-                path="/channels/:id"
-                component={ChannelUpdate}
+                path="/about/:id"
+                component={AboutUpdate}
             />
             <Route
-                path="/channels"
-                component={Channels}
+                path="/about"
+                component={About}
             />
-            <Route
-                path="/promotions/new"
-                component={PromotionsNew}
-            />
-            <Route
-                path="/promotions/:id"
-                component={PromotionsUpdate}
-            />
-            <Route
-                path="/promotions"
-                component={Promotions}
-            />
-            <Route
-                path="/contents/new"
-                component={ContentNew}
-            />
-            <Route
-                path="/contents/:id"
-                component={ContentUpdate}
-            />
-            <Route
-                path="/contents"
-                component={Contents}
-            />
-            <Route
-                path="/faq_categories/new"
-                component={FaqCategoryNew}
-            />
-            <Route
-                path="/faq_categories/:id"
-                component={FaqCategoryUpdate}
-            />
-            <Route
-                path="/faq_categories"
-                component={FaqCategories}
-            />
-            <Route
-                path="/covers/new"
-                component={CoverNew}
-            />
-            <Route
-                path="/covers/:id"
-                component={CoverUpdate}
-            />
-            <Route
-                path="/covers"
-                component={Covers}
-            />
-            <Route
-                path="/features/new"
-                component={FeatureNew}
-            />
-            <Route
-                path="/features/:id"
-                component={FeatureUpdate}
-            />
-            <Route
-                path="/features"
-                component={Features}
-            />
-            <Route
-                path="/plans/new"
-                component={PlanNew}
-            />
-            <Route
-                path="/plans/:id"
-                component={PlanUpdate}
-            />
-            <Route
-                path="/plans"
-                component={Plans}
-            />
-            <Route
-                path="/values/new"
-                component={ValueNew}
-            />
-            <Route
-                path="/values/:id"
-                component={ValueUpdate}
-            />
-            <Route
-                path="/values"
-                component={Values}
-            />
-            <Route
-                path="/channel/categories/new"
-                component={ChannelCategoryNew}
-            />
-            <Route
-                path="/channel/categories/:id"
-                component={ChannelCategoryUpdate}
-            />
-            <Route
-                path="/channel/categories"
-                component={ChannelCategories}
-            />
-            <Route
+           <Route
                 path="/settings/home"
                 component={HomeSetting}
             />
@@ -264,20 +145,20 @@ export default () => (
                 component={AboutSetting}
             />
             <Route
-                path="/settings/replay"
-                component={ReplaySetting}
-            />
-            <Route
-                path="/settings/channel"
-                component={ChannelSetting}
-            />
-            <Route
                 path="/settings/contact"
                 component={ContactSetting}
             />
             <Route
-                path="/settings/cover"
-                component={CoverSetting}
+                path="/settings/portfolio"
+                component={PortfolioSetting}
+            />
+            <Route
+                path="/settings/footer"
+                component={FooterSetting}
+            />
+            <Route
+                path="/settings/logo"
+                component={LogoSetting}
             />
             <Route component={NotFound} />
         </Switch>

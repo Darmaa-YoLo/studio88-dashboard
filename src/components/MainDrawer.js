@@ -17,18 +17,11 @@ import {
     Home,
     Account,
     Settings,
-    BookVariant,
     ChevronDown,
     ChevronUp,
     AccountBoxMultiple,
-    HelpCircle,
-    MapMarkerMultiple,
-    AccessPoint,
-    Animation,
-    AnimationPlay,
-    ClipboardPlay,
     PackageVariantClosed,
-    CardsDiamond
+
 } from 'mdi-material-ui'
 import { removeAuth } from './../redux/auth/actions'
 import { ThemeContext } from './../theme/context'
@@ -114,81 +107,33 @@ class MainDrawer extends Component {
                     exact: false
                 },
                 {
-                    to: '/covers',
-                    label: 'Слайдер',
+                    to: '/works',
+                    label: 'Ажлууд',
                     icon: <AccountBoxMultiple />,
                     exact: false
                 },
                 {
-                    to: '/plans',
-                    label: 'Багц',
+                    to: '/clients',
+                    label: 'Үйлчлүүлэгчид',
                     icon: <PackageVariantClosed />,
                     exact: false
                 },
                 {
-                    to: '/features',
-                    label: 'Багц боломж',
+                    to: '/team',
+                    label: 'Манай баг',
                     icon: <PackageVariantClosed />,
                     exact: false
                 },
                 {
-                    to: '/promotions',
-                    label: 'Урамшуулал',
-                    icon: <BookVariant />,
+                    to: '/about',
+                    label: 'Бидний тухай зургууд',
+                    icon: <PackageVariantClosed />,
                     exact: false
                 },
                 {
-                    to: '/contents',
-                    label: 'Контент',
-                    icon: <ClipboardPlay />,
-                    exact: false
-                },
-                {
-                    to: '/content/categories',
-                    label: 'Контент ангилал',
-                    icon: <Animation />,
-                    exact: false
-                },
-                {
-                    to: '/featured/contents',
-                    label: "Сонирхолтой контент",
-                    icon: <AnimationPlay />,
-                    exact: false
-                },
-                {
-                    to: '/channels',
-                    label: 'Суваг',
-                    icon: <AccessPoint />,
-                    exact: false
-                },
-                {
-                    to: '/channel/categories',
-                    label: 'Суваг төрөл',
-                    icon: <AccessPoint />,
-                    exact: false
-                },
-                {
-                    to: '/values',
-                    label: 'Үнэт зүйл',
-                    icon: <CardsDiamond />,
-                    exact: false
-                },
-                {
-                    to: '/branches',
-                    label: 'Салбарууд',
-                    icon: <MapMarkerMultiple />,
-                    exact: false
-                },
-                {
-                    to: '/faqs',
-                    label: 'Тусламж',
-                    icon: <HelpCircle />,
-                    exact: false
-                },
-                {
-                    to: '/faq_categories',
-                    label: 'Тусламж төрөл',
-                    icon: <HelpCircle />,
+                    to: '/filter',
+                    label: 'Шүүлтүүр',
+                    icon: <PackageVariantClosed />,
                     exact: false
                 },
             ],
@@ -314,21 +259,6 @@ class MainDrawer extends Component {
                                 />
                             </ListItem>
                             <ListItem
-                                to="/settings/replay"
-                                component={NavLink}
-                                className={listItem}
-                                activeClassName={listItemActive}
-                                exact={false}
-                                button
-                            >
-                                <ListItemText
-                                    primary="Нөхөж үзэх"
-                                    classes={{
-                                        primary: listItemText,
-                                    }}
-                                />
-                            </ListItem>
-                            <ListItem
                                 to="/settings/about"
                                 component={NavLink}
                                 className={listItem}
@@ -338,21 +268,6 @@ class MainDrawer extends Component {
                             >
                                 <ListItemText
                                     primary="Бидний тухай"
-                                    classes={{
-                                        primary: listItemText,
-                                    }}
-                                />
-                            </ListItem>
-                            <ListItem
-                                to="/settings/channel"
-                                component={NavLink}
-                                className={listItem}
-                                activeClassName={listItemActive}
-                                exact={false}
-                                button
-                            >
-                                <ListItemText
-                                    primary="Суваг"
                                     classes={{
                                         primary: listItemText,
                                     }}
@@ -374,7 +289,7 @@ class MainDrawer extends Component {
                                 />
                             </ListItem>
                             <ListItem
-                                to="/settings/cover"
+                                to="/settings/portfolio"
                                 component={NavLink}
                                 className={listItem}
                                 activeClassName={listItemActive}
@@ -382,7 +297,37 @@ class MainDrawer extends Component {
                                 button
                             >
                                 <ListItemText
-                                    primary="Арын зураг"
+                                    primary="Хийсэн ажлууд"
+                                    classes={{
+                                        primary: listItemText,
+                                    }}
+                                />
+                            </ListItem>
+                            <ListItem
+                                to="/settings/footer"
+                                component={NavLink}
+                                className={listItem}
+                                activeClassName={listItemActive}
+                                exact={false}
+                                button
+                            >
+                                <ListItemText
+                                    primary="Доод талбар"
+                                    classes={{
+                                        primary: listItemText,
+                                    }}
+                                />
+                            </ListItem>
+                            <ListItem
+                                to="/settings/logo"
+                                component={NavLink}
+                                className={listItem}
+                                activeClassName={listItemActive}
+                                exact={false}
+                                button
+                            >
+                                <ListItemText
+                                    primary="Лого"
                                     classes={{
                                         primary: listItemText,
                                     }}
